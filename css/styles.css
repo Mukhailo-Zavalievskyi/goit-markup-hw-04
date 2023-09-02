@@ -163,6 +163,15 @@ button {
     color: #404bbf;
 }
 
+.item-studio::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+}
+
 /*HERO*/
 .haro {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -283,6 +292,7 @@ button {
 
 .social-team-list {
     display: flex;
+    align-items: center;
     gap: 24px;
     justify-content: center;
 }
@@ -290,16 +300,20 @@ button {
 .social-team-item {
     width: 40px;
     height: 40px;
-}
-
-.sicial-team-link {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background-color: #4D5AE5;
+    list-style-type: none;
+}
+
+.social-team-link {
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 /*PORTFOLIO SECTION*/
@@ -336,7 +350,35 @@ button {
     width: calc((100% - 48px) / 3);
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 250ms ease-out;
+}
+
+.portfolio-images {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-images:hover .overlay,
+.portfolio-images:focus .overlay {
+    transform: translateY(0%);
+}
+
 /*PAGE FOOTER*/
+
 .page-footer {
     background-color: #2e2f42;
     padding-top: 100px;
@@ -366,4 +408,50 @@ button {
 
 .footer-logo-second-part {
     color: #f4f4fd;
+}
+
+.footer-social-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.social-footer-list {
+    display: flex;
+    gap: 16px;
+}
+
+.social-footer-item {
+    width: 40px;
+    height: 40px;
+    list-style-type: none;
+}
+
+.social-footer-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-footer-link:hover,
+.contacts-footer-link:focus {
+    background-color: #31d0aa;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-social-container {
+    flex-direction: column;
+    display: flex;
+    padding-left: 123px;
 }
