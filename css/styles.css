@@ -139,6 +139,7 @@ button {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -170,7 +171,6 @@ button {
 .item-studio {
     position: relative;
     color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-studio::after {
@@ -229,6 +229,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .service-button:hover,
@@ -309,6 +310,7 @@ button {
 
 .team-list-text {
     text-align: center;
+    margin-bottom: 8px;
 }
 
 .social-team-list {
@@ -404,8 +406,8 @@ button {
     overflow: hidden;
 }
 
-.portfolio-images:hover .overlay,
-.portfolio-images:focus .overlay {
+.portfolio-list-item:hover .overlay,
+.portfolio-list-item:focus .overlay {
     transform: translateY(0%);
 }
 
@@ -497,7 +499,6 @@ button {
 .footer-social-container {
     flex-direction: column;
     display: flex;
-    padding-left: 123px;
 }
 
 .social-footer-icons {
